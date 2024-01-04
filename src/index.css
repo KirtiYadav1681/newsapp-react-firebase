@@ -1,0 +1,258 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans';
+}
+a{
+  text-decoration: none;
+  color:red;
+}
+/* REGISTER AND LOGIN PAGE STYLING */
+.main{
+  background-image: linear-gradient(rgb(45, 17, 17), #141414);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.auth{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.auth img{
+  height:50px;
+  width: 70px;
+}
+.auth h1{
+  color:#fff;
+  font-size: 2rem;
+}
+.auth input{
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-size:18px;
+  padding:8px 10px;
+  box-sizing: border-box;
+  color:white;
+}
+.auth button{
+  width: 100%;
+  border:none;
+  background-color: red;
+  font-size: 18px;
+  padding:10px;
+  color: white;
+  border-radius: 5px; 
+  font-weight: bold;
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+/* NAVBAR STYLING */
+.navbar{
+  box-sizing: border-box !important;
+  padding: 15px 30px;
+  width: 100%;
+  background-color: #141414;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+
+}
+.navbar img{
+  height:50px;
+  width: 70px;
+}
+.navbar div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar button img{
+  height: 40px;
+  width: 40px;
+}
+.navbar button{
+  padding-left: 20px;
+  background:transparent;
+  border: none;
+  font-size:30px;
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+}
+
+ .navbar button:active{
+  transform: scale(0.9);
+}
+
+
+/* NEWS COMPONENT STYLING */
+.news {
+  text-align: center;
+  padding:20px 20px 0 20px;
+}
+.news h1 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.news-container div {
+  position: relative;
+  display: block;
+  width: calc(33.33% - 40px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.news-container div:hover {
+  transform: scale(1.05);
+}
+.news-container div a {
+  text-decoration: none;
+  color: #333;
+}
+.news-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.news-container button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s;
+}
+.news-container h4 {
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 15px;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .news-container div {
+    width: calc(50% - 40px);
+  }
+}
+@media (max-width: 600px) {
+  .news-container div {
+    padding-left:20px;
+    width:calc(100% - 40px);
+  }
+}
+
+/* NEWSDETAIL COMPONENT STYLINGH */
+.news-detail, .favourites {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.news-detail .link, .favourites .link {
+  display: inline-block;
+  color: #fff;
+  background-color: red;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition:all 0.1s ease-in-out;
+}
+
+ .link:active{
+  transform: scale(0.9);
+}
+.news-detail h1 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.news-detail img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.news-detail p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .news-detail {
+    padding: 20px;
+  }
+}
+
+/* FAVORITES COMPONENT STYLING */
+.favourites h1 {
+  color: #313131;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.favourites a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.favourites span{
+  position:absolute;
+  top:10px;
+  right: 10px;
+}
+.favourites p {
+  font-size: 25px;
+  line-height: 1.6;
+  color: #010101;
+  margin: 0;
+}
+.favourites img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .favourites {
+    padding: 20px;
+  }
+}
+
+footer{
+  text-align: center;
+  margin:10px 0 ;
+}
+
+
