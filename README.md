@@ -42,7 +42,12 @@ Welcome to the News App project! This ReactJS project is set up with Vite, utili
    Firebase authentication and database.
  ii) Update the Firebase configuration in the project.
 
-4.Run the app:
+4. Set up environment variables:
+   i) Create a .env file in the root directory of the project and add these variables with values in it:
+      - VITE_API_KEY=your-key-here (generate this from https://newsapi.or)
+      - VITE_API_URL=https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=
+
+5.Run the app:
 - npm start
 
 ## Usage
