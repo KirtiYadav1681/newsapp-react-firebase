@@ -9,6 +9,9 @@ import Register from "./components/Register";
 import NewsDetailPage from "./Pages/NewsDetailPage";
 import FavouritesPage from "./Pages/FavouritesPage";
 
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const App = () => {
   const [user, setUser] = useState(null);
   const [newsData, setNewsData] = useState(null);
@@ -29,9 +32,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=d9019beae293414f966d550f4855bcae"
-        );
+        const response = await fetch(`${apiUrl}${apiKey}`);
         const data = await response.json();
         setNewsData(data.articles);
         setIsLoading(false);
