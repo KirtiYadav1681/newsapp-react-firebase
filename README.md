@@ -48,7 +48,7 @@ Welcome to the News App project! This ReactJS project is set up with Vite, utili
       - VITE_API_URL=https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=
 
 5.Run the app:
-- npm start
+- npm run dev
 
 ## Usage
  - Navigate to the app in your web browser.
