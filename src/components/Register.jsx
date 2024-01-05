@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <div className="main">
       <ToastContainer
-        position="top-right"
+        position="bottom-right"
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -49,6 +49,7 @@ const Register = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
+        theme="dark"
       />
       <div className="auth">
         <img

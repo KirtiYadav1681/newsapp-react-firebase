@@ -12,6 +12,7 @@ import FavouritesPage from "./Pages/FavouritesPage";
 const App = () => {
   const [user, setUser] = useState(null);
   const [newsData, setNewsData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   //this is to know the user is logged in
   useEffect(() => {
@@ -33,11 +34,12 @@ const App = () => {
         );
         const data = await response.json();
         setNewsData(data.articles);
+        setIsLoading(false);
       } catch (error) {
         console.log(error);
       }
     };
-    return () => fetchData();
+    fetchData();
   }, []);
 
   return (
@@ -46,7 +48,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route
         path="/*"
-        element={user ? <HomePage newsData={newsData} /> : <Login />}
+        element={user ? <HomePage newsData={newsData} isLoading={isLoading}/> : <Login />}
       />
       <Route
         path="/news/:newsIndex"

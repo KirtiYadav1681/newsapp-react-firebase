@@ -34,15 +34,42 @@ const Favourites = () => {
       <Link className="link" to="/">
         Back to Homepage
       </Link>
-      {favorites?.map((favorite, index) => (
-        <div key={index}>
-          <a href={favorite.url} target="_blank">
-            <span>❤️</span>
-            <p>{favorite.title}</p>
-            <img src={favorite.urlToImage} alt={favorite.title} />
-          </a>
+      {favorites ? (
+        favorites?.map((favorite, index) => (
+          <div key={index}>
+            <a href={favorite.url} target="_blank">
+              <span>❤️</span>
+              <p>{favorite.title}</p>
+              <img src={favorite.urlToImage} alt={favorite.title} />
+            </a>
+          </div>
+        ))
+      ) : (
+        <div
+          style={{
+            margin: "50px 0",
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h1>No favorite news yet.</h1>
+          <p> Please select a favorite news</p>
+          <Link
+            to="/"
+            style={{
+              marginTop: "20px",
+              backgroundColor: "red",
+              color: "white",
+              borderRadius: "5px",
+            }}
+          >
+            See All News
+          </Link>
         </div>
-      ))}
+      )}
     </div>
   );
 };

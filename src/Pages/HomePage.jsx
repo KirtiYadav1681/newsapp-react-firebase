@@ -3,11 +3,11 @@ import News from "../components/News";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const HomePage = ({ newsData }) => {
+const HomePage = ({ newsData, isLoading }) => {
   return (
     <>
       <Navbar />
-      <News newsData={newsData} />
+      <News newsData={newsData} isLoading={isLoading}/>
       <Footer />
     </>
   );
